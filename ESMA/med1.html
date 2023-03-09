@@ -1,0 +1,58 @@
+<!-- https://www.w3schools.com/howto/howto_css_two_columns.asp -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+.medbut{
+    float: left;
+}
+</style>
+</head>
+<body>
+
+<h1>ESMA</h1>
+<h2>Environmentally Sustainable Medication Allocator</h2>
+
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <h2>Med 1</h2>
+    <button onclick="document.location='default.asp'">HTML Tutorial</button>
+    <div class="medbut">Button 1</div>
+    <div class="medbut">Button 2</div>
+    <div class="medbut">Button 3</div>
+    <p>Some text..</p>
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    <h2>Column 2</h2>
+    <p>Some text..</p>
+  </div>
+</div>
+
+</body>
+</html>

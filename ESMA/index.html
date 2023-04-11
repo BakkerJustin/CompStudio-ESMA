@@ -2,66 +2,116 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <!-- Google API for fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {
   box-sizing: border-box;
+  max-width: 850px;
 }
-
+body {
+  /* https://stock.adobe.com/images/medicine-seamless-background-pharmacy-hospital-concept-vector-illustration/290859958 */
+  background-image: url("assets/background.jpeg");
+}
 /* Create two equal columns that floats next to each other */
 .column {
-    float: left;
+  float: left;
   width: 50%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  
 }
-
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
 }
-
-h1 {
-    text-align: center;
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  
 }
 h2 {
+  font-family: 'Open Sans', sans-serif;
     text-align: center;
 }
 .medbut {
+  margin-bottom: 50px;
     display: flex;
     justify-content: center;
-}
-.butview {
-    width: fit-content;
+    text-align: center;
     
+}
+img {
+    width: 80%;
+}
+.head {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+.faqhelp {
+font-family: 'Open Sans', sans-serif;
+
+display: flex;
+justify-content: center;
+}
+a:link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  width: 100%;
 }
 </style>
 </head>
 <body>
-
-<h1>ESMA</h1>
-<h2>Environmentally Sustainable Medication Allocator</h2>
+  <!-- Create div for header image/logo that acts as button to redirect back to homepage -->
+<div class="head"><a href="/index.html" style="align-items: center;"><img src="/assets/logo.png" alt="Logo / Home" style="width: 100%;"></a>
+</div>
+<h2>Please select a medication to begin</h2>
 
 <div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2>Column 1</h2>
+  <div class="column">
+    <!-- create div "medbut" for each medication button and style locally to preserve customizability -->
     <div class="medbut">
-    <a class="butview" href="/med1.html"><img src="/assets/pill.jpeg" alt="HTML tutorial"></a>
-    <a class="butview" href="/med2.html"><img src="/assets/pill.jpeg" alt="HTML tutorial"></a>
-    <a class="butview" href="/med3.html"><img src="/assets/pill.jpeg" alt="HTML tutorial"></a>
+    <a href="/med1.html"><img src="/assets/pill1.png" alt="Medication 1" style="border: 6px solid #d7baad;background-color: rgb(255, 255, 255);box-shadow: 2px 2px 2px rgb(138, 138, 138);">Med 1</a>
+    <a href="/med2.html"><img src="/assets/pill2.png" alt="Medication 2" style="border: 6px solid #d7baad;background-color: rgb(255, 255, 255);box-shadow: 2px 2px 2px rgb(138, 138, 138);">Med 2</a>
+    <a href="/med3.html"><img src="/assets/pill3.png" alt="Medication 3" style="border: 6px solid #d7baad;background-color: rgb(255, 255, 255);box-shadow: 2px 2px 2px rgb(138, 138, 138);">Med 3</a>
 </div>
-    <p>Some text..</p>
-  </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
 
-    <a href="/med4.html"><img src="/assets/pill.jpeg" alt="HTML tutorial" style="width:30%;"></a>
-    <a href="/med5.html"><img src="/assets/pill.jpeg" alt="HTML tutorial" style="width:30%;"></a>
-    <a href="/med6.html"><img src="/assets/pill.jpeg" alt="HTML tutorial" style="width:30%;"></a>
-    <p>Some text..</p>
+   <!-- create div "faqhelp" and create F.A.Q. button -->
+   <a href="/faq.html">
+    <div class="faqhelp"><input type="button" class="button" value="F.A.Q." style="background-color: #527c88; width: 100%;">
+    </div></a>
   </div>
+  
+  <div class="column" >
+    
+    <div class="medbut">
+        <a href="/med4.html"><img src="/assets/pill4.png" alt="Medication 4" style="border: 6px solid #d7baad;background-color: rgb(255, 255, 255);box-shadow: 2px 2px 2px rgb(138, 138, 138);">Med 4</a>
+        <a href="/med5.html"><img src="/assets/pill5.png" alt="Medication 5" style="border: 6px solid #d7baad;background-color: rgb(255, 255, 255);box-shadow: 2px 2px 2px rgb(138, 138, 138);">Med 5</a>
+        <a href="/med6.html"><img src="/assets/pill6.png" alt="Medication 6" style="border: 6px solid #d7baad;background-color: rgb(255, 255, 255);box-shadow: 2px 2px 2px rgb(138, 138, 138);">Med 6</a>
+    </div>
+   <!-- create div "faqhelp" and create Help button -->
+   <a href="/help.html">
+    <div class="faqhelp"><input type="button" class="button" value="HELP" style="background-color: #527c88; width: 100%">
+    </div></a>
+    </div>
+  <div class="bottom">
+  
+  
+</div>
 </div>
 
 </body>
